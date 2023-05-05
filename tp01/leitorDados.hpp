@@ -7,7 +7,7 @@ class Leitor {
 public:
     Leitor();
 
-    void ler();
+    void ler(Graph& grafo);
 
     virtual ~Leitor();
 };

@@ -3,7 +3,9 @@
 
 using namespace std;
 
-Graph::Graph(int numeroVertices) {
+Graph::Graph(){}
+
+Graph::Graph(int numeroVertices){
     this->numeroVertices = numeroVertices;
     this->listaAdj = new std::vector<Aresta>[numeroVertices];
 }
@@ -16,6 +18,14 @@ void Graph::adicionarAresta(int fonte, int destino, int peso){
     aresta.peso = peso;
 
     this->listaAdj[fonte].push_back(aresta);
+}
+
+int Graph::getNumeroVertices(){
+    return this->numeroVertices;
+}
+
+vector<Aresta>* Graph::getListaAdj(){
+    return this->listaAdj;
 }
 
 void Graph::imprimir(){

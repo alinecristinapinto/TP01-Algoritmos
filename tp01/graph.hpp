@@ -12,11 +12,17 @@ typedef struct Aresta {
 
 class Graph {
 public:
+    Graph();
+
     Graph(int numeroVertices);
 
     void adicionarAresta(int fonte, int destino, int peso);
 
-    void imprimir(); //funcao apenas para debug
+    int getNumeroVertices();
+
+    std::vector<Aresta>* getListaAdj();
+
+    void imprimir(); // funcao apenas para debug
 
     ~Graph();
 
