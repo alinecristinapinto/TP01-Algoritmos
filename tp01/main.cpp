@@ -1,16 +1,20 @@
 #include <iostream>
 #include "graph.hpp"
 #include "leitorDados.hpp"
+#include "menorCaminho.hpp"
 
 using namespace std;
 
 int main(int argc, char const *argv[]) {
+    Leitor leitor = Leitor();
+    MenorCaminho menorCaminho = MenorCaminho();
     Graph grafo;
 
-    Leitor leitor = Leitor();
     leitor.ler(grafo);
 
-    grafo.imprimir();
+    menorCaminho.calcular(grafo);
+
+    // grafo.imprimir();
 
     return 0;
 }

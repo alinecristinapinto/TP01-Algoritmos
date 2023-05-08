@@ -17,7 +17,7 @@ void Graph::adicionarAresta(int fonte, int destino, int peso){
     aresta.destino = destino;
     aresta.peso = peso;
 
-    this->listaAdj[fonte].push_back(aresta);
+    this->listaAdj[fonte - 1].push_back(aresta);
 }
 
 int Graph::getNumeroVertices(){
@@ -29,7 +29,7 @@ vector<Aresta>* Graph::getListaAdj(){
 }
 
 void Graph::imprimir(){
-    for(int i = 1; i <= this->numeroVertices-1; i++){
+    for(int i = 0; i < this->numeroVertices-1; i++){
         for (Aresta v: this->listaAdj[i]) {
             cout << "Fonte: " << v.fonte << ", Destino: " << v.destino << ", Peso: " << v.peso << endl;
         }
