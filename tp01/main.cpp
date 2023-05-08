@@ -9,13 +9,10 @@ int main(int argc, char const *argv[]) {
     Leitor leitor = Leitor();
     MenorCaminho menorCaminho = MenorCaminho();
     Graph grafo;
-    int menorCaminhoPar;
 
     leitor.ler(grafo);
 
-    menorCaminhoPar = menorCaminho.calcularCaminhoPar(grafo);
-
-    cout << menorCaminhoPar << endl;
+    cout << menorCaminho.calcularCaminhoPar(grafo) << endl;
 
     return 0;
 }

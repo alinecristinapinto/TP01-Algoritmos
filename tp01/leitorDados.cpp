@@ -14,7 +14,10 @@ void Leitor::ler(Graph& grafo){
     int fonte, destino, peso;
     for(int i=0; i<numEstradas; i++){
         cin >> fonte >> destino >> peso;
+
+        // Grafo nao direcionado, logo se adiciona ambas direcoes
         grafo.adicionarAresta(fonte, destino, peso);
+        grafo.adicionarAresta(destino, fonte, peso);
     }
 }
 

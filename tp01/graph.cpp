@@ -29,7 +29,7 @@ vector<Aresta>* Graph::getListaAdj(){
 }
 
 void Graph::imprimir(){
-    for(int i = 0; i < this->numeroVertices-1; i++){
+    for(int i = 0; i < this->numeroVertices; i++){
         for (Aresta v: this->listaAdj[i]) {
             cout << "Fonte: " << v.fonte << ", Destino: " << v.destino << ", Peso: " << v.peso << endl;
         }
