@@ -12,7 +12,7 @@ class MenorCaminho {
 public:
     MenorCaminho();
 
-    void calcular(Graph grafo);
+    int calcularCaminhoPar(Graph grafo);
 
     ~MenorCaminho();
 };

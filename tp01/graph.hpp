@@ -22,7 +22,8 @@ public:
 
     std::vector<Aresta>* getListaAdj();
 
-    void imprimir(); // funcao apenas para debug
+    // DEBUG
+    void imprimir(); 
 
     ~Graph();
 
