@@ -25,7 +25,7 @@ int MenorCaminho::calcularCaminhoPar(Graph grafo){
     distanciaComNumArestasPar[INDEX_VERTICE_ORIGEM] = 0;
 
     // para cada vertice pertencente ao Grafo, adiciona-se a estimativa do caminho e sua posicao. 
-    // como inicialmente todos os vertices (exceto o de origem) possuem distancia infinita, pode-se inserir apenas o de origem.
+    // como esta sendo usado uma fila de prioridade que sera controlada dinamicamente dentro do while, pode-se inserir apenas o de origem.
     fila.push(make_pair(distanciaComNumArestasPar[INDEX_VERTICE_ORIGEM], VERTICE_ORIGEM));
 
     while(!fila.empty()){
